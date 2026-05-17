@@ -1,0 +1,122 @@
+#portfolio {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.filter li {
+  text-align: center;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filter li.active {
+  font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.gallery .item {
+  overflow: visible;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #cccccc;
+}
+
+.appendix {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.appendix li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.appendix a {
+  color: #080808;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.appendix a:hover {
+  color: #6e6e6e;
+}
+
+.image-container {
+  position: absolute;
+  max-width: 100%;
+  text-align: center;
+}
+
+.image-container img {
+  display: grid;
+  width: 100%;
+  height: auto;
+}
