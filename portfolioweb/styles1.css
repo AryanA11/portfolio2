@@ -1,6 +1,15 @@
+#p5-bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 #portfolio {
   text-align: center;
   font-family:Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
 .filter {
