@@ -1,108 +1,162 @@
 <link rel="stylesheet" href="styles1.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 <script src="p5-bg.js"></script>
-<a href="index.html">Home</a>
+
+<style>
+  /* ---- Fixed glass nav (matches project pages) ---- */
+  .project-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 16px 24px;
+    display: flex;
+    gap: 18px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-right-radius: 10px;
+  }
+
+  .project-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .project-nav a:hover {
+    color: #ddd;
+  }
+
+  /* Center the portfolio content in the viewport */
+  #portfolio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ---- 4-window video menu ---- */
+  .video-menu {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  .vwindow {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px;            /* smaller horizontal rectangle */
+    overflow: hidden;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .vwindow video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: grayscale(100%);          /* preview is grayscale... */
+    transition: filter 0.3s ease;
+  }
+
+  .vwindow:hover video {
+    filter: grayscale(0%);            /* ...and turns to color on hover */
+  }
+
+  .vwindow-label {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .vwindow-label h2 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: 700px) {
+    .vwindow { height: 100px; }
+    .vwindow-label h2 { font-size: 18px; }
+  }
+</style>
+
+<nav class="project-nav">
+  <a href="index.html">Home</a>
+  <a href="traditional.html">Portfolio</a>
+</nav>
 <section id="portfolio">
-  <header>    
-    <h2>Portfolio</h2>
-  <nav>
-    <ul class="appendix">
-      <li><a href="traditional.html">Traditional</a></li>
-      <li><a href="anim.html">Animation</a></li>
-      <li><a href="char.html">Character</a></li>
-    </ul>
-    </nav>
-</header>
-    
-    <div class="gallery">
-      <div class="item category1">
-      <a href="trad1.html">
-       <img src="./content/traditional/cloth study.png" alt="Artwork 1">
-      </a>
-      </div>
+  <header>
+    <h1>Aryan Advani</h1>
+  </header>
 
-      <div class="item category2">
-        <a href="trad2.html">
-        <img src="./content/traditional/The Maimed Stone.png" alt="Artwork 2">
-      </a>
-      </div>
+  <!--
+    Each window below = one project. To retarget a window, change:
+      href="..."          -> the project page it opens on click
+      <source src="..."   -> the video that plays on hover
+      <h2>...</h2>        -> the label shown on hover
+  -->
+  <div class="video-menu">
 
-      <div class="item category3">
-        <a href="trad3.html">
-        <img src="./content/traditional/Viscous Tears.png" alt="Artwork 3">
-        </a>
-      </div>
+    <a class="vwindow" href="trad1.html">
+      <video muted loop playsinline preload="metadata">
+        <source src="./content/anim/charshow.mp4" type="video/mp4">
+      </video>
+      <div class="vwindow-label"><h2>Rigs and Topology</h2></div>
+    </a>
 
-      <div class="item category4">
-        <a href="trad4.html">
-        <img src="./content/traditional/16_ADVANI.jpg" alt="Artwork 4">
-      </a>
-      </div>
+    <a class="vwindow" href="trad2.html">
+      <video muted loop playsinline preload="metadata">
+        <source src="./content/anim/bodymech.mp4" type="video/mp4">
+      </video>
+      <div class="vwindow-label"><h2>Body Mechanics</h2></div>
+    </a>
 
-      <div class="item category5">
-        <a href="trad5.html">
-        <img src="./content/traditional/17_ADVANI.jpg" alt="Artwork 5">
-        </a>
-      </div>
+    <a class="vwindow" href="char2.html">
+      <video muted loop playsinline preload="metadata">
+        <source src="./content/anim/amenitiesrend.mp4" type="video/mp4">
+      </video>
+      <div class="vwindow-label"><h2>Professional Layouts</h2></div>
+    </a>
 
-      <div class="item category5">
-        <a href="trad6.html">
-        <img src="./content/traditional/deciding squares.png" alt="Artwork 5">
-        </a>
-      </div>
+  </div>
+</section>
 
-      <div class="item category5">
-        <a href="trad7.html">
-        <img src="./content/traditional/glasscase.jpg" alt="Artwork 5">
-      </a>
-      </div>
 
-      <div class="item category5">
-        <a href="trad8.html">
-        <img src="./content/traditional/green lie.jpg" alt="Artwork 5">
-        </a>
-      </div>
+<script>
+  // Play the assigned video while hovering a window; pause + reset on leave.
+  document.querySelectorAll('.vwindow').forEach(function (win) {
+    var video = win.querySelector('video');
+    if (!video) return;
 
-      <div class="item category5">
-        <a href="trad9.html">
-        <img src="./content/traditional/overtime.jpg" alt="Artwork 5">
-        </a>
-      </div>
+    win.addEventListener('mouseenter', function () {
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {}); // ignore autoplay rejections
+    });
 
-      <div class="item category5">
-        <a href="trad10.html">
-        <img src="./content/traditional/plane.jpg" alt="Artwork 5">
-      </a>
-      </div>
-
-      <div class="item category5">
-        <a href="trad11.html">
-        <img src="./content/traditional/selfp.jpg" alt="Artwork 5">
-        </a>
-      </div>
-
-      <div class="item category5">
-        <a href="trad12.html">
-        <img src="./content/traditional/skull.jpg" alt="Artwork 5">
-        </a>
-      </div>
-
-      <div class="item category5">
-        <a href="trad13.html">
-        <img src="./content/traditional/sphere.jpg" alt="Artwork 5">
-      </a>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Aryan Advani. All rights reserved.</p>
-      <ul class="social-media">
-        <li><a href="https://www.linkedin.com/in/aryan-advani-7039a3211/" target="_blank">Linkedin</a></li>
-        <li><a href="https://www.instagram.com/quakermoth/" target="_blank">Instagram</a></li>
-      </ul>
-    </div>
-  </footer>
-  
+    win.addEventListener('mouseleave', function () {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>

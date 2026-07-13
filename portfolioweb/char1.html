@@ -1,16 +1,52 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<html>
-<head>
-    <title>Image Description</title>
-</head>
-<body>
-    <div class="image-container">
-        <img src="./content/character/01_ADVANI.jpg" alt="Image description">
-        <div class="description">
-          <h2>Emotion Sheet - Sunflower</h2>
-          <p></p>
-        </div>
-      </div>      
-</body>
-</html>
+<link rel="stylesheet" href="styles1.css">
+<link rel="stylesheet" href="project.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script src="p5-bg.js"></script>
+<script src="project.js"></script>
+
+<nav class="project-nav">
+  <a href="index.html">Home</a>
+  <a href="traditional.html">Portfolio</a>
+</nav>
+
+<div class="project">
+
+  <!-- 1. Looping video hero -->
+  <section class="project-hero reveal">
+    <h1>Fun</h1>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./content/anim/fightanim.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <!-- 2. Text section, left-aligned -->
+  <section class="text-section reveal">
+    <div class="text">
+      <h2>About this work</h2>
+      <p>A personal fight sequence built purely for the joy of it — snappy timing,
+        exaggerated impacts, and a little bit of chaos. Reference from martial arts
+        footage kept the action grounded while leaving room to push the poses.</p>
+      <p>Animated in Adobe Animate.</p>
+    </div>
+  </section>
+
+  <!-- 3. Image sections underneath -->
+  <figure class="image-section reveal">
+    <img src="./content/character/09_ADVANI.jpg" alt="Sketch 1">
+  </figure>
+
+  <figure class="image-section reveal">
+    <img src="./content/character/10_ADVANI.jpg" alt="Sketch 2">
+  </figure>
+
+  <figure class="image-section reveal">
+    <img src="./content/character/11_ADVANI.jpg" alt="Sketch 3">
+  </figure>
+
+  <figure class="image-section reveal">
+    <img src="./content/character/13_ADVANI.jpg" alt="Sketch 4">
+  </figure>
+
+</div>

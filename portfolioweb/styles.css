@@ -8,6 +8,7 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
+  font-size: 20px;
 }
 
 /* Header */
@@ -17,11 +18,20 @@ header {
   align-items: center;
   padding: 20px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Optional translucent background for visibility */
+  /* overlap over the hero video */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* transparent glass effect */
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -73,18 +83,23 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 20px;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 50px;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: #000;
+  /* transparent glass effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
+  font-size: 20px;
   padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
@@ -94,7 +109,16 @@ nav ul li a:hover {
 /* Footer */
 footer {
   width: 100%;
-  background-color: #333;
+  /* overlap over the hero video */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  /* transparent glass effect */
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -118,7 +142,7 @@ footer {
 
 .social-media a {
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
   text-decoration: none;
 }
 

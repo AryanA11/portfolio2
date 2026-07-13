@@ -30,8 +30,8 @@ function draw() {
   fill(BG, BG, BG, 5);
   rect(0, 0, width, height);
 
-  stroke(20, 20, 20, 14);
-  strokeWeight(0.55);
+  stroke(40, 40, 40, 14);
+  strokeWeight(0.70);
   noFill();
 
   for (const p of particles) {

@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<html>
-<head>
-    <title>Image Description</title>
-</head>
-<body>
-    <div class="image-container">
-        <img src="./content/traditional/The Maimed Stone.png" alt="Image description">
-        <div class="description">
-          <h2>The Maimed Stone</h2>
-          <p>2022, Charcoal, oil pastel, 13 x 10 in</p>
-        </div>
-      </div>      
-</body>
-</html>
+<link rel="stylesheet" href="styles1.css">
+<link rel="stylesheet" href="project.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script src="p5-bg.js"></script>
+<script src="project.js"></script>
+
+<nav class="project-nav">
+  <a href="index.html">Home</a>
+  <a href="traditional.html">Portfolio</a>
+</nav>
+
+<div class="project">
+
+  <!-- 1. Looping video hero -->
+  <section class="project-hero reveal">
+    <h1>Body Mechanics</h1>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./content/anim/bodymech.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Video sections underneath -->
+  <section class="video-section reveal">
+    <video autoplay muted loop playsinline>
+      <source src="./content/anim/shot 1 mask.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="video-section reveal">
+    <video autoplay muted loop playsinline>
+      <source src="./content/anim/shot 3 angle.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+</div>

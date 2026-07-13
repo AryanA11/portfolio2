@@ -1,16 +1,60 @@
-<!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<html>
-<head>
-    <title>Image Description</title>
-</head>
-<body>
-    <div class="image-container">
-        <img src="./content/traditional/cloth study.png" alt="Image description">
-        <div class="description">
-          <h2>Cloth Study</h2>
-          <p>2021, charcoal on textured paper, 12 x 18 in</p>
-        </div>
-      </div>      
-</body>
-</html>
+<link rel="stylesheet" href="styles1.css">
+<link rel="stylesheet" href="project.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script src="p5-bg.js"></script>
+<script src="project.js"></script>
+
+<nav class="project-nav">
+  <a href="index.html">Home</a>
+  <a href="traditional.html">Portfolio</a>
+</nav>
+
+<div class="project">
+
+  <!-- 1. Looping video hero -->
+  <section class="project-hero reveal">
+    <h1>Spiraling Madness</h1>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./content/anim/charshow.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- 2. Text section, left-aligned -->
+  <section class="text-section reveal">
+    <div class="text">
+      <h2>Rig and Model</h2>
+      <p>technical exploration of character rigging and clean topology. Original character modeled, designed, and rigged in blender. 
+        Used a combination of shape keys and bones to create a flexible rig that can be animated in a variety of ways. Described as athletic and uncanny, this character was designed to be a 
+        versatile asset to convey horror specifically. 
+      </p>
+      <p>Modeled and rigged in blender, with topology planned around the areas that
+        carry the most animation — the torso, legs and hands.</p>
+    </div>
+  </section>
+
+  <!-- 3. Image sections underneath -->
+  <figure class="image-section reveal">
+    <img src="./content/character/topo.png" alt="Rig study 1">
+  </figure>
+
+  <!-- 4. Video sections underneath -->
+  <section class="video-section reveal">
+    <video autoplay muted loop playsinline>
+      <source src="./content/anim/jumpscare rend.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="video-section reveal">
+    <video autoplay muted loop playsinline>
+      <source src="./content/anim/polwalkcyc.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <figure class="image-section reveal">
+    <img src="./content/character/untitled-1.png" alt="Rig study 1">
+  </figure>
+
+</div>
